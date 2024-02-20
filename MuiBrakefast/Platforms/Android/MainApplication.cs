@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MuiBrakefast
+namespace MauiBrakefast
 {
     [Application]
     public class MainApplication : MauiApplication

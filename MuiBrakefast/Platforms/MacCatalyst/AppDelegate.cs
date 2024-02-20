@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MuiBrakefast
+namespace MauiBrakefast
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

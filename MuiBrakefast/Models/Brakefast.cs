@@ -1,4 +1,4 @@
-﻿namespace MuiBrakefast.Models;
+﻿namespace MauiBrakefast.Models;
     public record  Brakefast(
         string Name,
         string Description,

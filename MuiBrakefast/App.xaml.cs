@@ -1,4 +1,4 @@
-﻿namespace MuiBrakefast
+﻿namespace MauiBrakefast
 {
     public partial class App : Application
     {

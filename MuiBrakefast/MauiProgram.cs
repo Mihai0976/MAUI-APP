@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace MuiBrakefast
+namespace MauiBrakefast
 {
     public static class MauiProgram
     {

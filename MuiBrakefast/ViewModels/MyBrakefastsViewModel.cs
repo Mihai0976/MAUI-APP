@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using MuiBrakefast.Models;
+using MauiBrakefast.Models;
 
-namespace MuiBrakefast.ViewModels;
+namespace MauiBrakefast.ViewModels;
     public partial class MyBrakefastsViewModel : ObservableObject
     {
           [ObservableProperty]
