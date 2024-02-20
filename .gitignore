@@ -1,9 +1,8 @@
-# Gradle files
-.gradle/
-build/
 
 # Local configuration file (sdk path, etc)
 local.properties
+.vs/MauiBrakefast
+
 
 # Log/OS Files
 *.log
@@ -15,19 +14,25 @@ captures/
 *.apk
 output.json
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
 
-# Keystore files
-*.jks
-*.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
 
-# Android Profiling
-*.hprof
+# VS Code directories
+.vscode/
+*.code-workspace
+
+# Ignore build artifacts
+bin/
+obj/
+
+*.pdb
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstate
+*.config
+*.bin
+/MuiBrakefast/.vs/MuiBrakefast/FileContentIndex
