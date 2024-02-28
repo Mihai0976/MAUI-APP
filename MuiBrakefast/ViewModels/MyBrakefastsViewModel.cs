@@ -1,21 +1,27 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using MauiBrakefast.Models;
 
 namespace MauiBrakefast.ViewModels;
     public partial class MyBrakefastsViewModel : ObservableObject
     {
           [ObservableProperty]
-         List<Brakefast> brakefasts;
+          List<Brakefast> brakefasts;
+          [ObservableProperty]
+          bool isRefreshing;
 
     public MyBrakefastsViewModel()
     {
-        LoadBreakfast();
+        LoadBreakfastAsync();
     }
-
-    public void LoadBreakfast()
+    [RelayCommand]
+    public async Task LoadBreakfastAsync()
     {
-        Brakefasts = new()
-       {
+        try
+        {
+           await Task.Delay(2000);
+           Brakefasts = new()
+           {
            new Brakefast(
                Name: "Vegan All The Way",
                Description:"Everything is Vegan Please join us for a healthy meal",
@@ -32,7 +38,13 @@ namespace MauiBrakefast.ViewModels;
                Image: new Uri("https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                Savory: new List<string>{"Bread", "Egs", "Bacon"},
                Sweets: new List<string>{"American Pancakes", "Waffle"})
-       };
+           };
+        }
+        finally 
+        { 
+            IsRefreshing = false;
+        }
+        
     }
 }
 

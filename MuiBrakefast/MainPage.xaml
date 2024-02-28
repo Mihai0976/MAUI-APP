@@ -19,7 +19,7 @@
         </HorizontalStackLayout>
 
         <Label Text="Brakefast that i have created" Grid.Row="1" TextColor="#555"/>
-        <RefreshView Grid.Row="2" Margin="0, 16" IsRefreshing="{Binding IsRefreshing}" Command="{Binding LoadBrakefastCommand}">
+        <RefreshView Grid.Row="2" Margin="0, 16" IsRefreshing="{Binding IsRefreshing}" Command="{Binding LoadBreakfastCommand}">
             <CollectionView ItemsSource="{Binding Brakefasts}"  >
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" ItemSpacing="20">
