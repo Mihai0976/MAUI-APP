@@ -52,8 +52,14 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
-                                    <Label Text="{Binding Name}" FontSize="24" FontFamily="RobotoBold"/>
-                                    <Label Text="Tomorrow 08:00 - 11:00 AM" FontSize="16" Grid.Row="1"/>
+                                    <Label Text="{Binding Name}" FontSize="24" FontFamily="RobotoBold" Grid.Row="0"/>
+                                    <FlexLayout Wrap="Wrap" Grid.Row="1" AlignItems="Start">
+                                        <Label Text="{Binding StartDateTime, Converter={StaticResource DateTimeToBrakefastDayConverter}}"/>
+                                        <Label Text=", "/>
+                                        <Label Text="{Binding StartDateTime, Converter={StaticResource DateTimeToTimeConverter}}"/>
+                                        <Label Text=" - "/>
+                                        <Label Text="{Binding EndDateTime, Converter={StaticResource DateTimeToTimeConverter}}"/>
+                                    </FlexLayout>
                                     <Label Text="{Binding Description}" Grid.Row="2" Padding="0,8,0,0" TextColor="#555"/>
                                     <FlexLayout BindableLayout.ItemsSource="{Binding Savory}" Grid.Row="3" Wrap="Wrap" AlignItems="Start">
                                         <BindableLayout.ItemTemplate>
